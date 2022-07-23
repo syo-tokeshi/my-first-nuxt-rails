@@ -7,10 +7,12 @@ touch {.gitignore,.env}
 ```
 
 ```
+// .gitignoreに書き込む
 /.env
 ```
 
 ```
+// .envに書き込む
 # commons
 WORKDIR=app
 CONTAINER_PORT=3000
@@ -28,10 +30,8 @@ docker-compose build
 
 ## [api & db]アプリ作成を作成 
 ```
-// いらない！
-docker-compose run --rm api rails new . -f -B -d postgresql --api
 
-// gemfile反映させる
+// Gemfile反映させる
 docker-compose build api
 
 // db作成
